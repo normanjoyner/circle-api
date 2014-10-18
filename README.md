@@ -60,9 +60,9 @@ circle_api.configure(options);
 * Getting Bitcoin Address - ```circle_api.get_address(fn)```
 * Getting Personal Information - ```circle_api.get_personal_information(fn)```
 * Getting Fiat Accounts - ```circle_api.get_fiat_accounts(fn)```
-* Depositing Money
-* Sending Money
-* Requesting Money
+* Depositing Money - ```circle_api.deposit(options, fn)```
+* Sending Money - ```circle_api.send(options, fn)```
+* Requesting Money - ```circle_api.request(options, fn)```
 
 ###Examples
 Before making future API calls, you must first login:
@@ -146,6 +146,7 @@ circle_api.get_fiat_accounts(function(err, accounts){
 ```
 
 Deposit $1 from fiat account, and print response:
+```
 circle_api.deposit({"fiat_address": "fiat-account-address", amount: 1.0}, function(err, response){
     if(err)
         throw err;
@@ -155,6 +156,7 @@ circle_api.deposit({"fiat_address": "fiat-account-address", amount: 1.0}, functi
 ```
 
 Send $1 to bitcoin address (or email address), and print response:
+```
 circle_api.send({"address": "1CniXdfgpAbM3pYbbLvooRZAGhTEpTMjkN", amount: 1.0}, function(err, response){
     if(err)
         throw err;
@@ -164,6 +166,7 @@ circle_api.send({"address": "1CniXdfgpAbM3pYbbLvooRZAGhTEpTMjkN", amount: 1.0}, 
 ```
 
 Request $1 from email address, and print response:
+```
 circle_api.request({"email": "someones@email.com", amount: 1.0}, function(err, response){
     if(err)
         throw err;
