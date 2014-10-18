@@ -99,16 +99,6 @@ circle_api.get_activities(function(err, activities){
 });
 ```
 
-Fetch account activities, and print response:
-```javascript
-circle_api.get_activities(function(err, activities){
-    if(err)
-        throw err;
-
-    console.log(activities);
-});
-```
-
 Fetch account history, and print response:
 ```javascript
 circle_api.get_history(function(err, history){
