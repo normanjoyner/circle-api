@@ -1,0 +1,32 @@
+{
+  "name": "circle-api",
+  "version": "0.0.0",
+  "description": "A nodejs module for interacting with the Circle API",
+  "main": "application.js",
+  "dependencies": {
+    "lodash": "^2.4.1",
+    "notp": "^2.0.3",
+    "request": "^2.45.0",
+    "thirty-two": "0.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/normanjoyner/circle-api.git"
+  },
+  "keywords": [
+    "circle",
+    "btc",
+    "bitcoin",
+    "api"
+  ],
+  "author": "Norman Joyner <norman.joyner@gmail.com>",
+  "license": "GPLv2",
+  "bugs": {
+    "url": "https://github.com/normanjoyner/circle-api/issues"
+  },
+  "homepage": "https://github.com/normanjoyner/circle-api"
+}
