@@ -1,6 +1,6 @@
 {
   "name": "circle-api",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A nodejs module for interacting with the Circle API",
   "main": "application.js",
   "dependencies": {
