@@ -20,7 +20,7 @@ Norman Joyner - norman.joyner@gmail.com
 ```npm install circle-api```
 
 ###Configuration
-Simply require the circle-api module, instantiate a new Circle-Api object, configure it if necessary, and start making calls. The mfa secret and api version are configurable.
+Simply require the circle-api module, instantiate a new Circle-Api object, configure it if necessary, and start making calls. The mfa secret and api version are configurable. Your Circle account must be set up to use Google Authenticator, rather than text messaged based MFA.
 
 New Circle-Api objects can be instantiated with configuration parameters. Here is an example:
 ```javascript
@@ -45,9 +45,13 @@ circle_api.configure(options);
 
 ####Options
 ```api_version``` - [optional, defaults to "v2"] version of the API to use
+
 ```mfa_secret``` - [required] totp secret
 
 ####Finding MFA Secret
+Before scanning the Google Authenticator code with your application of choice, first scan the QR code with a QR code app. View the url the QR contains and you will see something similar to: otpauth://totp/Circle%3Ayour%40email.com?secret=NVTGCX3TMVRXEZLU&issuer=Circle
+
+Take notice to what 'secret' is equal to in the url and use this as the ```mfa_secret```.
 
 ###Supported API versions
 * v2
